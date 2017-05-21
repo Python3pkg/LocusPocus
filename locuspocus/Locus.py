@@ -183,7 +183,7 @@ class Locus(object):
             val : object
                 Attribute value of default value.
         '''
-        if key not in self.attr.keys() or self[key] is None:
+        if key not in list(self.attr.keys()) or self[key] is None:
             return default
         else:
             return self[key]

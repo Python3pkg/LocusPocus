@@ -34,7 +34,7 @@ def test_update(simple_Locus):
     assert set(new_data.keys()) <= set(new_Locus.attr.keys()) 
 
     # probably we should also check the values on a key per key basis
-    for k in new_data.keys():
+    for k in list(new_data.keys()):
         assert new_data[k] == new_Locus[k]
 
 def test_as_record(simple_Locus):
